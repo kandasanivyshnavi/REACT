@@ -1,0 +1,71 @@
+we can write all our css code inside index.css file which will be automatically created when ever we created a react environment in our project.
+sample code 
+index.css
+-------------------------------------------------------------------INDEX.CSS -------------------------------------
+.body
+{
+  background-color: black;
+}
+.CardStyle
+{
+  background-color: rgb(211, 144, 144);
+  border: 10rem;
+  margin: 5rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 3rem;
+  border-radius: 2rem;
+  background-image: linear-gradient(rgb(87, 202, 215),pink,rgb(213, 103, 189));
+}
+--------------------------------------------------------------------------------APP.jsx -------------------------------------------------------------------------------------------------------------------------
+
+// card component 
+
+
+import Card_ from "./Card"
+function App()
+{
+  
+  return(
+    <div>
+      <Card_ name="Hari Prasad Sands" details="WE supply any kind of hight quality sand . please contact 9885302182"></Card_>
+      <Card_ name="Mamatha software solutions" details="WE supply any kind of hight quality sand . please contact 8885534299"></Card_>
+    </div>
+  );
+};
+
+export default App;
+------------------------------------------------------CARD.jsx--------------------------------------------------------------------------------
+
+
+
+
+function Card_(props)
+{
+    return(
+        <div className="CardStyle">    //insted of styling here i named as a class and then i wrote the style code in index.css file 
+          <h1>
+            {props.name}
+          </h1>
+          <p>
+            {props.details}
+          </p>
+          
+        </div>
+        );
+}
+
+export default Card_;
+
+
+
+
+
+
+
+
+
+
+
+
+
